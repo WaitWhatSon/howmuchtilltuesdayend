@@ -94,7 +94,7 @@ window.addEventListener('load', function () {
     }
 
     function tillLast(date) {
-        let days = 7 - (3 - date.getDay() % 7);
+        let days = (7 - (3 - date.getDay())) % 7;
         let hours = date.getHours();
         let minutes = date.getMinutes();
         let seconds = date.getSeconds();
@@ -103,7 +103,7 @@ window.addEventListener('load', function () {
     }
 
     function tillNext(date) {
-        let days = (2 - date.getDay()) % 7;
+        let days = (2 - date.getDay() + 7) % 7;
         let hours = 23 - date.getHours();
         let minutes = 59 - date.getMinutes();
         let seconds = 59 - date.getSeconds()
